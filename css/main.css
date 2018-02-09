@@ -14,9 +14,23 @@
     format('opentype');
 }
 
+@font-face {
+	font-family: 'Circular Book';
+	src: 
+    url('../fonts/Circular/CircularStd-Book.ttf')
+    format('opentype');
+}
+
+@font-face {
+	font-family: 'Circular Bold';
+	src: 
+    url('../fonts/Circular/CircularStd-Bold.otf')
+    format('opentype');
+}
+
 body{
     font-family: 'Calibre Regular', sans-serif;
-    background-color: #fafafa;
+    background-color: #fff9ec;
     box-sizing: border-box;
     margin: 0;
     min-width: 300px;
@@ -24,8 +38,13 @@ body{
 
 /* LANDING STRIP & HEADER TEXTS #fd473c*/
 .landing{
+    background-image: url(../img/background/splas-home.jpg);
+    background-repeat: no-repeat;
+    background-size: 140%;
+/*
     background: linear-gradient(#fafafa, #fafafa);
     background-color: #f8f8f8;
+*/
     padding: 30px;
 }
 
@@ -39,6 +58,29 @@ body{
     margin-top: 60px;
 }
 
+.center-text{
+    font-family: 'Calibre';
+    text-align: left;
+    margin: auto;
+    margin-top: 60px;
+    width: 70%;
+    min-width: 280px;
+    max-width: 600px;
+    font-size: 1.3em;
+    opacity: 0.8;
+
+}
+
+#gameplay{
+    background-color: white;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.card-splash{
+    width: 30%;
+}
+
 .project-intro{
     margin: auto;
     width: 70%;
@@ -47,9 +89,16 @@ body{
     margin-top: 60px;
 }
 
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 1rem 1rem;
+}
+
 .intro h2, .project-intro h2{
-    color: #ff4622;
-    font-size: 2.5em;
+    color: #fafafa;
+    font-size: 2em;
+    font-family: 'Circular Bold';
 }
 
 .project-intro h3{
@@ -62,7 +111,7 @@ body{
 
 .intro p, .project-intro p{
     font-family: 'Calibre Regular';
-    font-size: 1.2em;
+    font-size: 1.3em;
     opacity: 0.8;
 }
 
@@ -88,39 +137,7 @@ img{
     transition:  0.5s;
 }
 
-/* IMAGE GALLERY */
-
-.gallery {
-  /* Prevent vertical gaps */
-  line-height: 0;
-  -webkit-column-count: 1;
-  -webkit-column-gap:   0px;
-  -moz-column-count:    1;
-  -moz-column-gap:      0px;
-  column-count:         1;
-  column-gap:           0px;  
-    width: 80%;
-    padding: 0px;
-    margin: auto;
-}
-
-.gallery img {
-  /* Just in case there are inline attributes */
-  width: 100% !important;
-  height: auto !important;
-  border: none;
-    margin-bottom: 0px;
-    margin: 15px;
-    
-}
-
 /*HOME FLEXBOX*/
-
-.container {
-  margin: 0 auto;
-  max-width: 1200px;
-  padding: 5rem 5rem;
-}
 
 .responsive-image{
     max-width: 100%;
@@ -212,8 +229,9 @@ nav {
 	padding: 15px 30px;
     width: 100%;
 	background: #fff;
-    font-family: 'Calibre Semibold';
+    font-family: 'Circular Bold';
     box-shadow: 0 0 2px #ddd;
+    font-size: 0.9em;
 }
 
     .navlinks{
@@ -246,13 +264,14 @@ nav {
 
     .logo{
         display: inline-block;
+        font-family: 'Circular Bold';
 		text-transform: uppercase;
 		letter-spacing: 2px;
 		margin: 20px 20px 0 0;
         opacity: 0.9;
         transition: 0.2s;
         -moz-transition: 0.2s;
-        color: #ff4622;
+        color: #333333;
     }
 
 /* TEXT*/ 
@@ -422,6 +441,22 @@ a, a:visited {
 @media screen and (min-width: 550px) {
 
     .landing{
+        background-size: 100%;
+    }
+    
+    .container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 5rem 5rem;
+}
+    
+    #about{
+    background-size: 150%;
+}
+    
+    .nav{
+        position: fixed;
+    z-index: 100;
     }
     
   .project {
@@ -484,6 +519,14 @@ a, a:visited {
     flex-direction: row;
   }
     
+    .card-splash{
+    width: 25%;
+}
+    
+      #about{
+    background-size: 120%;
+}
+    
     
     .project-container img{
    width: 100%;
@@ -516,7 +559,13 @@ a, a:visited {
 
 
 @media screen and (min-width: 1000px) {
-  .project {
+  
+         #about{
+    background-size: 100%;
+}
+    
+    
+    .project {
     width: calc(33.3333% - 2rem);
     }
     
@@ -525,12 +574,9 @@ a, a:visited {
     }
     
     .intro h2, .project-intro h2{
-    color: #ff4622;
+    color: #fafafa;
     font-size: 4em; }
-    
-      
-    
-    
+
         .project-container img{
    width: 100%;
     border:10px solid #fff;
