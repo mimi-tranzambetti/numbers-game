@@ -68,7 +68,10 @@ body{
     max-width: 600px;
     font-size: 1.3em;
     opacity: 0.8;
+}
 
+.center-text h2{
+    font-family: 'Circular Bold';
 }
 
 #gameplay{
@@ -78,8 +81,28 @@ body{
 }
 
 .card-splash{
+    width: 100px;
+}
+
+.card-img{
     width: 30%;
 }
+
+#c-hobby{
+    position:relative;
+    right: -100px;
+    top: -100px;
+    float: right;
+    display: none;
+}
+
+#c-profile{
+    position: relative;
+    float: right;
+    right: -50px;
+    top: -350px;
+}
+
 
 .project-intro{
     margin: auto;
@@ -114,6 +137,8 @@ body{
     font-size: 1.3em;
     opacity: 0.8;
 }
+
+
 
 /* PROJECT PAGES */
 img{
@@ -311,7 +336,6 @@ nav {
 
 footer{
     text-align: center;
-    margin-top: 20px;
     padding: 20px;
     background-color: #fdfdfd;
 }
@@ -330,7 +354,7 @@ footer{
 
 .oops{
     font-family: 'Calibre Semibold';
-   color: #ff4622;
+   color: #333333;
    font-size: 2em;
 	text-decoration: underline;
 }
@@ -444,6 +468,11 @@ a, a:visited {
         background-size: 100%;
     }
     
+    #c-hobby{
+    display: block;
+    width: 25%;
+}
+    
     .container {
   margin: 0 auto;
   max-width: 1200px;
@@ -520,7 +549,7 @@ a, a:visited {
   }
     
     .card-splash{
-    width: 25%;
+    width: 200px;
 }
     
       #about{
